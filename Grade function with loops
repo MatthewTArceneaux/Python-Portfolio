@@ -1,0 +1,34 @@
+#Matthew Arceneaux
+#02/20/2024
+#grade function with loops
+import random
+
+def letter_grade(grade):
+  if grade >= 90:
+    return "A"
+  elif grade >= 80:
+    return "B"
+  elif grade >= 70:
+    return "C"
+  elif grade >= 60:
+    return "D"
+  else:
+    return "F"
+#if statmetns. if the condition is met it will print out the corresponding grade and letter grade to match.
+num_grades = 0
+while num_grades < 3 or num_grades > 20:
+  try:
+    num_grades = int(input("Enter an integer between 3 and 20:"))
+  except ValueError:
+    print("Try again. Please enter the correct value.")
+  #This is my input function for my integers.
+  #If the value is incorrect it will prompt you to enter the correct value.
+total_grade = 0
+for i in range (num_grades):
+  grade = random. randint (50, 100)
+  #print my grades in the range of 50-100
+  total_grade += grade 
+  print ("Grade",  ":", grade, "(", letter_grade(grade), ")")
+  
+average = total_grade / num_grades
+print("Average grade:", average, "(", letter_grade(average), ")")
