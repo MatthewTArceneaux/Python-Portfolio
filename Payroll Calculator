@@ -1,0 +1,28 @@
+#Matthew Arceneaux
+
+#01/29/2024
+
+#Payroll caculator
+name = input("What is your name?")
+
+print('Hello '+  name)
+Hours = input("How many Hours have you worked?")
+
+Hourly_wage = input("What is your Hourly wage?")
+
+gross = int(Hourly_wage) * int(Hours)
+ #python can not mutiply an int and str. So I use an int function before hourlywage and hours to get the caculation.
+print(name + "'s gross pay is $" + str (gross)) 
+name = input("What is your name?")
+
+print("Hello " + name)
+
+Hours = input("How many Hours have you worked?")
+
+Hourly_wage = input("What is your Hourly wage?")
+
+gross_pay = int(Hourly_wage) * int(Hours)
+
+print (name + "'s gross pay is $" + str (gross_pay))
+
+print ("Make sure your bank acount has $"  + str(gross + gross_pay)) 
