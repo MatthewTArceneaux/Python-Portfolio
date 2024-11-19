@@ -1,0 +1,32 @@
+#Matthew Arceneaux 
+#02/15/2024
+#Better Payroll
+
+name = input(" Please enter employe name ")
+
+print ("Hello," + name)
+
+Hours = input("How many hours worked")
+  
+Wage = input("What is your Wage")
+
+H = float(Hours)
+W = float(Wage)
+if H <= 40:
+  gross = print (name + "'s gross pay is " + str(H*W))
+else:
+  gross = print (name + " 's gross pay is " + str((H-40)*(1.5*W)+(40*W)))
+
+#Pt2
+
+name = input(" Please enter employe name ")
+print ("Hello," + name)
+Hours = input("How many hours worked")
+Wage = input("What is your Wage")
+
+H = float(Hours)
+W = float(Wage)
+if H <= 40:
+  print (name + "'s gross pay is " + str(H*W))
+else:
+  print (name + " 's gross pay is " + str((H-40)*(1.5*W)+(40*W)))
