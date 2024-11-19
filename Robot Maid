@@ -1,0 +1,99 @@
+#Matthew Arceneaux
+#RM
+#04/07/2024
+import random
+
+# Function to check if today is laundry day
+def is_laundry_day():
+    return random.choice([True, False])
+
+# Function to clean the house
+def clean_house():
+    print("Good morning! MaidBot is on the job!")
+    print("Checking schedule...")
+
+    # List of tasks for each day
+    tasks = {
+        "Monday": ["clean floors", "dust furniture"],
+        "Tuesday": ["vacuum stairs", "wash jeans", "scrub toilets"],
+        "Wednesday": ["clean windows", "organize closets"],
+        # Add more tasks for other days as needed
+    }
+
+    # Get today's tasks
+    today = "Tuesday"  # For demonstration purposes, set today as Tuesday
+    today_tasks = tasks.get(today, [])
+
+    print("Today is", today, "so I'm scheduled to", ', '.join(today_tasks) + '.')
+
+    print("Assessing house...")
+    # Simulate random conditions for tasks
+    toys_on_floor = random.randint(0, 10)
+    dishes_in_sink = random.choice([True, False])
+    goo_on_floor = random.choice([True, False])
+
+    # Perform tasks based on conditions
+    if toys_on_floor > 0:
+        print(f"Junior left {toys_on_floor} toys and clothes on the floor, so I will pick them up.")
+
+    if dishes_in_sink:
+        print("There are dirty dishes in the sink, so I will wash them.")
+
+    if goo_on_floor:
+        print("Something gooey is on the kitchen floor, so I will mop it.")
+
+    print("Starting up peppy 80's Pop to work by.")
+
+    # Perform specific tasks
+    for task in today_tasks:
+        if task == "clean floors":
+            clean_floors()
+        elif task == "vacuum stairs":
+            vacuum_stairs()
+        elif task == "wash jeans":
+            wash_jeans()
+        elif task == "scrub toilets":
+            scrub_toilets()
+
+# Function to clean floors
+def clean_floors():
+    print("Picking things up is the first thing to do.")
+    # Simulate picking up toys and clothes
+    toys_picked_up = random.randint(1, 10)
+    print(f"Picking up {toys_picked_up} toys and putting them in toy box.")
+    # Simulate picking up dirty clothes
+    print("Picking up dirty clothes and taking them to laundry room.")
+
+# Function to vacuum stairs
+def vacuum_stairs():
+    print("Vacuuming stairs")
+    # Simulate vacuuming stairs
+    for step in range(1, 11):
+        print(f"Vacuum step {step}")
+        if step == 5:
+            print("Vacuum stops.")
+            print("I check filter; it's full.")
+            print("I empty filter into trash, and return to vacuuming.")
+        elif step == 10:
+            print("Vacuum battery dies, so I return it to the charging station.")
+
+# Function to wash jeans
+def wash_jeans():
+    print("Sorting laundry.")
+    print("I will put jeans in the washer, add detergent, and start it.")
+    # Simulate checking detergent
+    if random.random() < 0.5:
+        print("I notice that the detergent bottle weighs less than 100 grams, and add detergent to the shopping list.")
+
+# Function to scrub toilets
+def scrub_toilets():
+    print("Scrubbing toilets.")
+    # Simulate scrubbing toilets
+
+# Main function
+def main():
+    clean_house()
+
+# Run the program
+if __name__ == "__main__":
+    main()
