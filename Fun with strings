@@ -1,0 +1,37 @@
+#Matthew Arceneaux
+#Fun with Strings
+#04/02/2024
+# Prompt the user to enter a string
+user_input = input("Enter a string: ")
+
+
+# Function to check if a character is a vowel
+def is_vowel(char):
+    return char in 'aeiouAEIOU'
+
+
+# Initialize variables to store the modified string and word length
+modified_string = ""
+word_length = 0
+
+
+# Iterate through each character in the input string
+for char in user_input:
+    if char == ' ':
+        # Print the word and its length
+        print(modified_string, ":", word_length)
+        # Reset variables for the next word
+        modified_string = ""
+        word_length = 0
+    else:
+        # Convert vowels to uppercase and everything else to lowercase
+        if is_vowel(char):
+            modified_string += char.upper()
+        else:
+            modified_string += char.lower()
+        # Increment word length
+        word_length += 1
+
+
+# Print the last word and its length
+print(modified_string, ":", word_length)
