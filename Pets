@@ -1,0 +1,31 @@
+#Matthew Arceneaux
+#Pets
+#04/04/2024
+# Define a list of tuples containing information about pets
+animals = [('zebra', 'spot', 'white'),
+           ('horse', 'speedy', 'black'),
+           ('octopus', 'inky', 'brown'),
+           ('rabbit', 'fluffy', 'white'),
+           ('fly', 'zip', 'yellow')]
+
+# Loop through the list and print each pet's information
+for animal in animals:
+    print(f"{animal[1]} is a {animal[2]} {animal[0]}")
+
+# Prompt user to enter a color
+color_input = input("Enter a color: ").strip().lower()
+
+# Print pets that match the entered color
+print("Pets with the entered color:")
+for animal in animals:
+    if animal[2].lower() == color_input:
+        print(f"{animal[1]} is a {animal[2]} {animal[0]}")
+
+# Prompt user to enter a pet type
+type_input = input("Enter a pet type: ").strip().lower()
+
+# Print pets that match the entered type
+print(f"Pets of type '{type_input}':")
+for animal in animals:
+    if animal[0].lower() == type_input:
+        print(f"{animal[1]} is a {animal[2]} {animal[0]}")
