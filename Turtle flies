@@ -1,0 +1,24 @@
+#Your header goes here
+#Import the turtle graphics stuff that we need
+from turtle import Turtle, Screen
+
+# YOUR CODE GOES HERE
+
+
+# DON'T MESS WITH THIS PART
+colors = [] #this is how you initialize a list.  Next chapter!
+
+for line in fout: #This is why you have to use fout as your file variable
+  colors.append(line[:-1]) #Appending each color to a list
+
+t = Turtle() #Creating a turtle drawing object
+
+screen = Screen() #Screen to draw on
+screen.bgcolor('black') #background color of the screen
+for x in range(360): #Draw 360 line segments
+    t.pencolor(colors[x%len(colors)]) #Change colors each time
+    t.width(x/100 + 1) #Make the lines a little thicker as it grows
+    t.forward(x) #Draw the segment
+    t.left(360/len(colors) + 1) #Turn left at the corret angle to make the polygon, but add 1 degree to make it cooler
+    
+# CLOSE YOUR FILE HERE
